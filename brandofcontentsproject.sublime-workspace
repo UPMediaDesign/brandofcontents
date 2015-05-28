@@ -355,6 +355,46 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "wp-config.php",
+			"settings":
+			{
+				"buffer_size": 3029,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/tboc_theme/index.php",
+			"settings":
+			{
+				"buffer_size": 2049,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "wp-content/themes/tboc_theme/header.php",
+			"settings":
+			{
+				"buffer_size": 3631,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "wp-content/themes/tboc_theme/style.css",
+			"settings":
+			{
+				"buffer_size": 6642,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -380,6 +420,7 @@
 	},
 	"file_history":
 	[
+		"/Users/upmedia/GitHub/brandofcontents/index.php",
 		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/js/superslides.js",
 		"/Users/upmedia/GitHub/mujer_descubre_wp/wp-content/themes/mujer/footer.php",
 		"/Users/upmedia/GitHub/santodomingo/category.php",
@@ -506,8 +547,7 @@
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/custom.css",
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/tbk_config 2.dat",
 		"/private/var/folders/qt/8cc7xcts4cjccztx7wylwbjh0000gn/T/fz3temp-1/tbk_bp_pago.cgi",
-		"/Users/upmedia/Desktop/carpeta sin título/respaldo-black/cgi-bin/datos/tbk_config.dat",
-		"/Volumes/KINGSTON/respaldo-almahue/wp-content/themes/almahue/functions.php"
+		"/Users/upmedia/Desktop/carpeta sin título/respaldo-black/cgi-bin/datos/tbk_config.dat"
 	],
 	"find":
 	{
@@ -672,13 +712,165 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "wp-config.php",
+					"settings":
+					{
+						"buffer_size": 3029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								942,
+								942
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 299.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "wp-content/themes/tboc_theme/index.php",
+					"settings":
+					{
+						"buffer_size": 2049,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1964,
+								1964
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 224.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 2,
+					"file": "wp-content/themes/tboc_theme/header.php",
+					"settings":
+					{
+						"buffer_size": 3631,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3354,
+								3354
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "wp-content/themes/tboc_theme/style.css",
+					"settings":
+					{
+						"buffer_size": 6642,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5168,
+								5168
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1366.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"incomplete_sync": null,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

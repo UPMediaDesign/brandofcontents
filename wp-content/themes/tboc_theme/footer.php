@@ -1,36 +1,51 @@
 
-	<div class="container-fluid">
-        <div class="row">
-            <footer class="blue-footer">
-        <div class="row">
-            <div class="logos">
-                <a href=""><img src="<?php bloginfo('template_directory'); ?>/images/logoip.png" alt=""></a>
-                <a href=""><img src="<?php bloginfo('template_directory'); ?>/images/acreditacion.png" alt=""></a>
+<div class="container-fluid">
+    <div class="row">
+        <footer class="blue-footer">
+            <div class="row">
             </div>
-            <div class="invite-ip">
-                <h3>Si tienes dudas, <strong class="yellow">llámanos 2 2722 48 00</strong></h3>
-            </div>
-            <div class="sociales fl col-xs-6 col-xs-offset-4">
-                <div class="cta-ip">
-                    <a href="http://www.ipchile.cl">www.<strong>IPCHILE</strong>.cl</a>
-                </div>
-                <ul>
-                    <li><a href="https://twitter.com/ipchile" target="_blank"><span class="fa fa-fw fa-twitter"></span></a></li>
-                    <li><a href="https://www.facebook.com/ipchile" target="_blank"><span class="fa fa-fw fa-facebook"></span></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCU_MCFWu30MdZmwILvRQDng" target="_blank"><span class="fa fa-fw fa-youtube"></span></a></li>
-                    <li><a href="https://plus.google.com/+ipchile/" target="_blank"><span class="fa fa-fw fa-google"></span></a></li>
-                   
-                </ul>
-            </div>
-            <div class="credits">
-                <span>IPCHILE - Todos los Derechos Reservados Copyright © 2015</span>
-            </div>
-            
-        </div>
         </footer>
-        </div>
     </div>
+</div>
 
+<script>
+var vid = document.getElementById('v0');
+vid.pause();
+window.onscroll = function() {
+	vid.currentTime = window.pageYOffset / 400;
+};
+
+jQuery(function() {
+  jQuery('video').data('size', 'big');
+});
+
+jQuery(window).scroll(function() {
+  if (jQuery(document).scrollTop() > 4010) {
+    if (jQuery('video').data('size') == 'big') {
+      jQuery('video').data('size', 'small');
+      jQuery('video').stop().animate('height', '370px');
+	  jQuery('header').css('background-color' , '#fff' );
+	 
+	 
+    }
+  } 
+  
+  else {
+    if (jQuery('video').data('size') == 'small') {
+      jQuery('video').data('size', 'big');
+      jQuery('video').stop().css('height', '100%');
+	  jQuery('header').css({'background-color' : 'transparent' })
+    }
+  }
+});
+
+
+ jQuery('main').scrollToFixed( {
+        top: 350,
+        limit: $('main').offset().top,
+    });
+
+</script>
 
 </body>
 <?php wp_footer()?>

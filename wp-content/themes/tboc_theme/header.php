@@ -31,20 +31,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <!-- Google Analytics -->
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-60367457-2', 'auto');
-  ga('send', 'pageview');
-
-</script>
 
 <!-- Facebook -->
 <script>
-  window.fbAsyncInit = function() {
+/*   window.fbAsyncInit = function() {
     FB.init({
       appId      : '488345084651474',
       xfbml      : true,
@@ -58,33 +48,40 @@
      js = d.createElement(s); js.id = id;
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+   }(document, 'script', 'facebook-jssdk')); */
 </script>
 
 </head>
+<video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload">
+      <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.webm"></source>
+      <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.ogv"></source>
+      <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4"></source>
+      <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+</video>
 
-<body <?php body_class()?>>
+<nav class="nav mostrar" role="navigation" id="menu">
+	<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'navbar-nav' , 'theme_location' => 'primary' ) ); ?>
+</nav>
 
-  <div class="container-fluid">
-    <div class="row">
-      <header class="col-xs-12 bg-girl">
-    
-        <div class="col-xs-7 col-xs-offset-5 content-inside">
-          <h1>Preguntas Frecuentes</h1>
-          <p>Hemos seleccionado las más importantes. Te invitamos a leerlas y visitar la sección “Preguntas Frecuentes” en el sitio de IPCHILE.</p>     
-
-           <button class="downly" type="button"></button> 
-       </div>
-
-      
-    
-    </header>
-    <section class="arrow">
-      
-    </section>
+<header class="navbar-fixed-top">
+    <div class="logo navbar-brand">
+        <a href="<?php echo home_url() ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logotbocsmall.png" /></a>
     </div>
+    <div class="navbar-header pull-right">
+        <div class="high-bar" id="nav-display" >
+            <span class="sr-only">Menú</span>
+        </div>
+    </div>
+</header>
 
-  </div>
+
+
+<script>
+  jQuery( '#nav-display' ).click(function() {
+    jQuery( '.nav' ).toggleClass( "mostrar" );
+    jQuery( '.navbar-nav' ).toggleClass( "mostrar-b" );
+});
+</script>
 
 
 
