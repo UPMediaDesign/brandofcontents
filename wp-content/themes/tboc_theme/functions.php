@@ -1,17 +1,14 @@
 <?php if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
-//add_image_size('col-6', 960, 920, true );
+add_image_size('encabezado', 870, 200, true );
+add_image_size('col-md-6', 530, 353, true);
+add_image_size('col-md-7', 345, 345,true);
+add_image_size('col-md-12', 703, 358, true);
+add_image_size('personal', 405, 405, true);
+add_image_size('portadillas', 350, 550, true);
+add_image_size('encabezadopost',1210, 695, true );
 }
-/* 
-add_filter('image_size_names_choose', 'my_image_sizes');
-	function my_image_sizes($sizes) {
-	$addsizes = array(
-		"col-6" => 'Media columna'
-	);
-	$newsizes = array_merge($sizes, $addsizes);
-	return $newsizes;
-}
-*/
+
 add_post_type_support('page', 'excerpt');
 ;?>
 <?php 
@@ -37,57 +34,41 @@ add_action('wp_enqueue_scripts', 'call_scripts');
 <?php
 //Post type register
 
-add_action('init', 'preguntas_register');
-function preguntas_register() {
+add_action('init', 'clientes_register');
+function clientes_register() {
     $args = array(
-        'label' => 'Preguntas Frecuentes',
-        'singular_label' => 'Pregunta',
+        'label' => 'Clientes | Casos',
+        'singular_label' => 'Cliente',
         'public' => true,
 		'menu_position' => 5, 
         '_builtin' => false,
         'capability_type' => 'post',
 		'has_archive' => false,
         'hierarchical' => false,
-        'rewrite' => array( 'slug' => 'preguntas'),
-        'supports' => array('title', 'editor' )
+        'rewrite' => array( 'slug' => 'clientes'),
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail' )
     );
-    register_post_type('preguntas', $args);
+    register_post_type('clientes', $args);
     flush_rewrite_rules();
 }
-
-register_taxonomy("tipo", array('preguntas','sugerencias'), array("hierarchical" => true, "label" => "Tipo", "singular_label" => "Tipo", "rewrite" => true));
-
-
-add_action('init', 'sugerencias_register');
-function sugerencias_register() {
+add_action('init', 'personales_register');
+function personales_register() {
     $args = array(
-        'label' => 'Sugerencias',
-        'singular_label' => 'Sugerencias',
+        'label' => 'Personal',
+        'singular_label' => 'Personal',
         'public' => true,
 		'menu_position' => 5, 
         '_builtin' => false,
         'capability_type' => 'post',
 		'has_archive' => false,
         'hierarchical' => false,
-        'rewrite' => array( 'slug' => 'sugerencias'),
-        'supports' => array('title', 'editor' , 'excerpt' , 'thumbnail' )
+        'rewrite' => array( 'slug' => 'personales'),
+        'supports' => array('title', 'editor', 'thumbnail' )
     );
-    register_post_type('sugerencias', $args);
+    register_post_type('personales', $args);
     flush_rewrite_rules();
 }
-?>
-<?php //register sidebars
-
-/* register_sidebar(array(
-  'name' => __( 'Home' ),
-  'id' => 'home',
-  'description' => __( 'Widgets en esta área se mostrarán en el home, utlice esta área para agregar la mini encuesta' ),
-  'before_title' => '<h3>',
-  'after_title' => '</h3>'
-)); */
-
-
-//add_filter('widget_text', 'do_shortcode');
+register_taxonomy('casos', array('clientes'), array("hierarchical" => true, "label" => "Casos", "singular_label" => "Caso", "rewrite" => 'hierarchical'));
 
 ?>
 <?php 

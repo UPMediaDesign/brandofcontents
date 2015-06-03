@@ -81,19 +81,6 @@ h4, .h4, h5, .h5, h6, .h6 { margin-top:0px;}
 }
 
 @font-face {
-    font-family: 'montserratblack';
-    src: url('fonts/montserrat-black-webfont.eot');
-    src: url('fonts/montserrat-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-black-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-black-webfont.woff') format('woff'),
-         url('fonts/montserrat-black-webfont.ttf') format('truetype'),
-         url('fonts/montserrat-black-webfont.svg#montserratblack') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
     font-family: 'montserratbold';
     src: url('fonts/montserrat-bold-webfont.eot');
     src: url('fonts/montserrat-bold-webfont.eot?#iefix') format('embedded-opentype'),
@@ -107,17 +94,45 @@ h4, .h4, h5, .h5, h6, .h6 { margin-top:0px;}
 }
 
 @font-face {
-    font-family: 'montserratlight';
-    src: url('fonts/montserrat-light-webfont.eot');
-    src: url('fonts/montserrat-light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/montserrat-light-webfont.woff2') format('woff2'),
-         url('fonts/montserrat-light-webfont.woff') format('woff'),
-         url('fonts/montserrat-light-webfont.ttf') format('truetype'),
-         url('fonts/montserrat-light-webfont.svg#montserratlight') format('svg');
+    font-family: 'robotolight';
+    src: url('fonts/roboto-light-webfont.eot');
+    src: url('fonts/roboto-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto-light-webfont.woff2') format('woff2'),
+         url('fonts/roboto-light-webfont.woff') format('woff'),
+         url('fonts/roboto-light-webfont.ttf') format('truetype'),
+         url('fonts/roboto-light-webfont.svg#robotolight') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'robotoregular';
+    src: url('fonts/roboto-regular-webfont.eot');
+    src: url('fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('fonts/roboto-regular-webfont.woff') format('woff'),
+         url('fonts/roboto-regular-webfont.ttf') format('truetype'),
+         url('fonts/roboto-regular-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'playfair_displayitalic';
+    src: url('fonts/playfairdisplay-italic-webfont.eot');
+    src: url('fonts/playfairdisplay-italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/playfairdisplay-italic-webfont.woff2') format('woff2'),
+         url('fonts/playfairdisplay-italic-webfont.woff') format('woff'),
+         url('fonts/playfairdisplay-italic-webfont.ttf') format('truetype'),
+         url('fonts/playfairdisplay-italic-webfont.svg#playfair_displayitalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 
 /******************************* Header **************************************/
 /* Video Inicial */
@@ -144,18 +159,147 @@ header{ height:110px;}
 
 /******************************* Contenido Inicio **************************************/
 
-main{ background-color:#fff; position:relative; z-index:1;}
+main{ background-color:#fff; position:relative; z-index: 999;}
 
 /* Texto invitacion */
 .invite{margin-bottom: 140px;}
-.invite h1{text-align:center; font-size:45px; font-family:'montserratregular', arial, helvetica, sans-serif; line-height: 1.2em; color:#000000; margin:0 auto 30px; display:block; text-transform: uppercase;}
-.invite p{text-align:center; font-size:22px; color:#000;font-family:"Times New Roman", Times, serif; font-weight:lighter; line-height: 1.4em; margin:0 auto; display:block; font-style: italic; padding: 0px 20%;}
+.invite h1{text-align:center; font-size:45px; font-family:'montserratregular', arial, helvetica, sans-serif; line-height: 1.2em !important; color:#000000; margin:100px auto 30px; display:block; text-transform: uppercase;}
+.invite p{text-align:center; font-size:22px !important; color:#000 !important;font-family:'playfair_displayitalic', Times, serif !important; font-weight:lighter; line-height: 1.4em; margin:0 auto; display:block; font-style: italic; padding: 0px 20%;}
 
 /* Casos */
-.redinitial{background:#e35144;}
+.redinitial{background:#e35144; padding-top:80px;}
+.pushed h2{  text-align: center; line-height: 1.3em; margin-top: 90px; font-size: 39px; font-family: 'montserratregular'; color: #fff; }
+.pushed h2 strong{font-family: 'montserratbold';}
+/* Columna derecha */
+.number.first figcaption{ background: #fff; width: 90%; float: right; margin-right: 25px;}
+.number.first h3{text-align: right;}
+.number.first h3 a{text-align: right; font-family: 'montserratbold'; font-size: 20px; text-decoration:none; color:#000000; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; text-transform: uppercase; padding-right:10px; margin-bottom:10px;}
+.number.first h3 a:hover{color:#0b0b0b; padding-right:10px;}
+.number.first p{color:#000000; text-align:right; font-size: 14px; padding-right:10px; font-family: 'robotoregular';}
+.number.first span{color: #e14a45; font-size: 60px; float: left; padding-left: 10px; font-family: 'robotolight';}
+
+figure.number a img{ background: #cacaca; opacity: 1; -webkit-transition: .3s ease-in-out; transition: .3s ease-in-out; }
+figure.number a:hover img{background: #cacaca url(images/play-icon.png); opacity: .5; }
+/* Columna Izquierda */
+.number.second{position: relative; bottom: 147px;}
+.number.second figcaption{background: #fff; width: 36%; float: right; margin-right: 0;}
+.number.second h3 a{text-align: left; font-family: 'montserratbold'; font-size: 20px; text-decoration:none; color:#000000; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; text-transform: uppercase; padding-right:10px; clear: both; float: left; padding-left:10px;}
+.number.second h3 a:hover{color:#0b0b0b; padding-right:10px; clear:both;}
+.number.second p{color:#000000; text-align:left; font-size: 14px; padding-right:10px; font-family: 'robotoregular'; clear:both; padding-left:10px;}
+.number.second span{color: #e14a45; font-size: 60px; float: left; padding-left: 10px; font-family: 'robotolight';}
+.number.second img{float:right;}
+/* Columna full size */
+.number.third{position: relative; bottom: 110px;}
+.number.third figcaption{background: #fff; width: 36%; float: left; margin-right: 25px; margin-top: 60px;}
+.number.third h3 a{text-align: left; font-family: 'montserratbold'; font-size: 20px; text-decoration:none; color:#000000; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; text-transform: uppercase; padding-right:10px; clear: both; float: left; padding-left:10px; margin-bottom:10px;}
+.number.third h3 a:hover{color:#0b0b0b; padding-right:10px; clear:both;}
+.number.third p{color:#000000; text-align:left; font-size: 14px; padding-right:10px; font-family: 'robotoregular'; clear:both; padding-left:10px;}
+.number.third span{color: #e14a45; font-size: 60px; float: left; padding-left: 10px; font-family: 'robotolight';}
+.number.third img{float:left;}
+/*Ver mas*/
+.more{width: 120px; margin: 0 auto; display: block;}
+.more a {text-align: center; display: block; margin: 20px auto 30px; color: #fff; font-family: 'robotoregular'; text-transform: uppercase; text-decoration: none; clear:both;}
+.more a:hover{opacity:.5; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease;}
+.more a img{display:block; text-align: center; margin:0 auto 5px;}
+
+.white{background:#ffffff;}
+.white-invite h3{font-family: 'playfair_displayitalic', Times, serif; text-align: center; font-size: 26px; line-height: 1.5em; color: #000000; text-transform: none; margin-top: 45px; margin-bottom: 20px; padding-left: 15px; padding-right: 15px;}
+.white-invite a{ border: 1px solid #e14a45; padding: 10px 20px; font-family: 'robotoregular'; letter-spacing: 1px; text-transform: uppercase; color: #e14a45; text-align: center; display: table; margin: 25px auto; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; }
+.white-invite a:hover{color: #fff; background:#e14a45; text-decoration: none;}
+
+/******************************* Single **************************************/
+.nav.mostrar-content{height:110px; background:#ffffff;}
+.introcontent{margin-top: 150px; margin-bottom:70px;}
+.introcontent h2{line-height: 1.2em; font-family: 'montserratregular'; color:#000000; font-size:36px; text-align: left;}
+.introcontent p{line-height:1.5em; font-family: 'playfair_displayitalic'; font-size:18px; color:#000; text-align: left;}
+.encabezado img{width: 100%; height: auto;}
+
+.throwback{position: relative; background-color: transparent; bottom: 25px;}
+.throwback a{text-transform: uppercase; text-decoration: underline; color: #cdcdcd; float:left;}
+.throwtext{position: relative; background-color: transparent; bottom:80px;}
+.throwtext p{float:right; font-family:'robotolight' !important; text-transform: uppercase; font-size: 60px !important; color:#ffffff;}
+
+.titlesingle{margin-top: -50px}
+
+.about{margin-top: -80px; background: #fff; z-index: 50; position: relative; margin-bottom: 30px;}
+.about h2{font-family: 'montserratbold'; font-size: 18px; text-align: left; text-transform: uppercase; margin-bottom:40px; margin-top:10px;}
+.about p{font-family: 'robotoregular'; font-size: 14px; text-align: left; line-height: 1.6em;}
+
+.share li {float: left; list-style: none; padding: 10px; font-size: 20px; text-transform: uppercase;}
+.share li a{color:#000; text-decoration:none; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; padding:5px;}
+.share li a:hover{color:#fff; background: #000; border-radius: 5px; text-decoration: none;padding:5px;} 
+
+/* BIG CALL TO ACTION */
+.bigcta a {display: block; text-align: center; background: #E35144; padding: 30px; margin-top: 20px; margin-bottom: 35px; color: #fff; text-transform: uppercase; font-family: 'robotoregular'; font-size: 24px; letter-spacing: 1px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; border:1px solid transparent;}
+.bigcta a:hover{background-color: #fff; border:1px solid #E35144; color:#E35144; text-decoration: none;}
+
+/******************************* Contacto **************************************/
+.nav.mostrar.content {height: 110px; background: #fff; z-index: 999; position: fixed; opacity: 1; }
+.nav.mostrar.contact {z-index: 0; }
+.contact-base {padding-top: 20vh; background:#E35144; height: 100vh;}
+.contact-base h2{font-family: 'montserratregular'; font-size: 36px; color:#fff; text-transform:uppercase; text-align: left; margin-bottom: 60px;}
+.contact-base span{float: left; clear: both; width: 100%; font-size: 17px; color: #82211e; font-family: 'robotoregular'; padding-bottom: 5px; }
+
+.form-control {background-color: #E35144; border-radius: 0; border: none; box-shadow: none; color:#82211e; height: 35px; padding: 15px 0; font-size: 15px;}
+.control ::-webkit-input-placeholder {color:transparent; font-weight:300; font-size:17px; font-family: 'robotoregular'; /*border-bottom:2px solid #82211e;*/ padding-bottom:5px !important; line-height:1.3em;}
+.control :-moz-placeholder {color:#82211e; font-weight:300; font-size:17px; font-family: 'robotoregular';  /*border-bottom:2px solid #82211e;*/ padding-bottom:5px !important; line-height:1.3em;}
+.control ::-moz-placeholder {color:#82211e; font-weight:300; font-size:17px; font-family: 'robotoregular';  /*border-bottom:2px solid #82211e;*/ padding-bottom:5px !important; line-height:1.3em;}
+.control :-ms-input-placeholder {color:#82211e; font-weight:300; font-size:17px; font-family: 'robotoregular';  /*border-bottom:2px solid #82211e;*/ padding-bottom:5px !important; line-height:1.3em;}
+
+textarea.form-control{max-height: 150px; height: 100% !important; max-width: 450px;}
+input[type=submit].wpcf7-form-control.wpcf7-submit.btn-default.btn{background: #c83f3b; border-radius:0; padding: 15px 25px; border: none; color: #fff; font-size: 18px; font-family: 'montserratregular'; text-transform: uppercase; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; }
+input[type=submit].wpcf7-form-control.wpcf7-submit.btn-default.btn:hover{background: #82211e;; border-radius:0; padding: 15px 25px; border: none; color: #fff; font-size: 18px; font-family: 'montserratregular'; text-transform: uppercase;}
+
+
+span.wpcf7-form-control-wrap.Nombre input[type="text"],
+span.wpcf7-form-control-wrap.Email input[type="email"]{color:#82211e;}
+input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.form-control {color: #82211e !important; }
+
+.address{margin-top:110px; font-family: 'robotoregular'; font-size: 24px; text-align: left;}
+.address a{color:#82211e; text-decoration: none;}
+.address a:hover{color:#c83f3b; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease;}
+span.firstspan{color:#f9837f; font-size: 24px;}
+span.secondspan{color:#ffffff; font-size: 24px;}
+
+/******************************* Somos **************************************/
+.personas img{width:100%; height: auto;}
+.personas figcaption {border: 3px solid #e14a45; padding: 10px 10px; display: block; position: relative; bottom: 140px; margin: 0 auto; width: 150px; }
+.personas figcaption p {text-align: center; font-family: 'montserratbold'; font-size: 18px; color: #ffffff; line-height: 1.4em; margin-bottom: 0; }
+
+figcaption.profile {width: 80%; border: 0; background-color: #fff; text-align: center; margin-top: 20px; }
+figcaption.profile h3{color:#000; font-family: 'montserratbold'; font-size: 18px; text-align: center; padding-bottom:5px;}
+figcaption.profile p{color:#000; font-family: 'robotoregular'; font-size: 14px; text-align: center; line-height:1.6em;}
+
+figure.personas figcaption.naming{opacity:1; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; cursor:pointer;}
+figure.personas:hover figcaption.naming{opacity:0;}
+
+figure.personas figcaption.profile{opacity:0; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; cursor:pointer;}
+figure.personas:hover figcaption.profile{opacity:1;}
+
+ul.prof-soc{list-style: none; display: table; margin: 0 auto;}
+ul.prof-soc li{float: left; text-align: center; padding: 25px; font-size: 25px;}
+ul.prof-soc li a{color:#000; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;border-radius: 85px; padding: 5px;}
+ul.prof-soc li a:hover{background:#000; color:#ffffff; }
+
+/******************************* The Brand of Content **************************************/
+.main-container {padding: 40px 15px; }
+
+/******************************* Auxiliares **************************************/
+.upper{margin-top: -140px;}
 
 /******************************* Footer **************************************/
+.bg-foot{background: url("images/bg-foot.png"); background-size: cover; }
+.logofooter p{text-align: center; color: #B2B2B2 !important; line-height: 1.4em;} 
+.credits p{text-align: center; color:#D2D2D2 !important; font-family:'robotoregular' ; font-size: 13px !important;}
+.credits span{color:#fff;}
+.credits a{text-decoration: none; color:#e14a45;}
+.logofooter img{margin: 50px auto 35px; display: block;}
 
+.contact-foot a{background: #e14a45; padding: 20px 30px; font-family: 'robotoregular'; letter-spacing: 1px; text-transform: uppercase; color: #ffffff; text-align: center; display: table; margin: 25px auto; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease;}
+.contact-foot a:hover{background:#ffffff; padding: 20px 30px; font-family: 'robotoregular'; letter-spacing: 1px; text-transform: uppercase; color: #e14a45; text-align: center; display: table; margin: 25px auto; text-decoration: none;}
+ul.web-soc{margin: 0 auto 35px; display: table; float: none; max-width: 188px; width: 100%; list-style: none;} 
+ul.web-soc>li{float:left; display: block; padding: 0 15px 0; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease;}
+ul.web-soc>li:hover{opacity: .8;}
 
 /******************************* Auxiliares **************************************/
 .mtop30{margin-top:30px;}

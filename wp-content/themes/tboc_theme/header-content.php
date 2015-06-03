@@ -53,8 +53,7 @@
 
 </head>
 
-
-<nav class="nav mostrar" role="navigation" id="menu">
+<nav class="nav mostrar content" role="navigation" id="menu">
 	<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'navbar-nav' , 'theme_location' => 'primary' ) ); ?>
 </nav>
 
