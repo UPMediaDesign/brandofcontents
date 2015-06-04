@@ -64,7 +64,7 @@
 <?php }?>
 
 <script>
-(function( $ ) {
+/*(function( $ ) {
 
 	var $container = $('.masonry-container');
 	$container.imagesLoaded( function () {
@@ -76,7 +76,7 @@
 	
 	
 	
-})(jQuery);
+})(jQuery);*/
 </script>
 
 </body>

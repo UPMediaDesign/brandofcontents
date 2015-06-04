@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: The Brand of Contents
+Template Name: Clientes | Casos
 */
 ?>
 <?php get_header('content'); ?>
@@ -23,8 +23,9 @@ Template Name: The Brand of Contents
 
   <div class="row masonry-container">
 
-    <div class="col-md-6">
-      <!-- Columnas Casos | Clientes  -->
+
+
+    <!-- Columnas Casos | Clientes  -->
    
       <?php $countmazclientes = 0 ?>
       <?php foreach ($posts as $mazcliente): ?>
@@ -32,27 +33,27 @@ Template Name: The Brand of Contents
 
         <?php if ($countmazclientes == 1 || $countmazclientes == 2 || $countmazclientes == 4){
           $msize = 'big6';
-          $mclass = 'col-md-12 col-sm-12 col-esp item';
+          $mclass = 'col-md-6 col-sm-6 col-esp item';
         }
 
         elseif ($countmazclientes == 5 || $countmazclientes == 6){
           $msize = 'small300';
-          $mclass = 'col-md-6 col-sm-12 col-esp item';
+          $mclass = 'col-md-3 col-sm-6 col-esp item';
         }
 
         elseif ($countmazclientes == 3 ){
           $msize = 'big300';
-          $mclass = 'col-md-6 col-sm-12 col-esp item';
+          $mclass = 'col-md-3 col-sm-6 col-esp item';
         }
 
         elseif ($countmazclientes == 7 || $countmazclientes == 8 ){
           $msize = 'big6';
-          $mclass = 'col-md-12 col-sm-12 col-esp item';
+          $mclass = 'col-md-6 col-sm-6 col-esp item';
         }
 
         else {
           $msize = 'big6';
-          $mclass = 'col-md-12 col-sm-12 col-esp item';
+          $mclass = 'col-md-6 col-sm-6 col-esp item';
         } 
 
         ?>
@@ -71,12 +72,6 @@ Template Name: The Brand of Contents
           </figure>
                           
           <?php endforeach ?>
-    </div>
-
-    <div class="col md-6">
-      
-      
-    </div>
 
   </div>
   <!--/.masonry-container  -->

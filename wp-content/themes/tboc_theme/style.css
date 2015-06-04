@@ -143,23 +143,25 @@ h4, .h4, h5, .h5, h6, .h6 { margin-top:0px;}
 
 header{ height:110px;}
 .logo{ padding:20px 0 20px 40px}
-.nav {top: 0; bottom: 0; left: 0; right: 0; position: fixed; z-index: 99; display: block; text-align: center; background-color: rgba(227, 68, 61, .3); opacity:1; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease;  }
-.high-bar{display: block; background: #e35144 url(images/dotted.png); background-position:50% ; z-index: 99; right: 0; position: fixed; border-radius: 0; width: 60px; height: 60px; padding: 0; margin: 0; background-repeat:no-repeat; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; border: none; cursor:pointer;}
+.nav {top: 0; bottom: 0; left: 0; right: 0; position: fixed; z-index: 1031; display: block; text-align: center; background-color: rgba(227, 68, 61, .3); opacity:1; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease;  }
+.high-bar{display: block; background: #e35144 url(images/dotted.png); background-position:50% ; z-index: 1032; right: 0; position: fixed; border-radius: 0; width: 60px; height: 60px; padding: 0; margin: 0; background-repeat:no-repeat; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; transition: all 0.5s ease; border: none; cursor:pointer;}
 .high-bar:hover{background:#ffffff url(images/cross.png); background-position: 50%; background-repeat:no-repeat;}
 .navbar-collapse {width: 100%; max-width: 460px; position: absolute; right: 0; left: 15vw; top: 70px; z-index:9999;}
 .navbar-nav {margin: 0 auto; width: 360px; display: none; position: absolute; top: 30%; left: 0; right: 0; }
 
-.mostrar{ opacity:0;}
+.mostrar{ opacity:0; z-index: 1029}
 .mostrar-b{display:inline-block;}
 
 .navbar-nav ul li{list-style: none; text-align: center; font-size: 16px; text-transform: uppercase;}
+.navbar-nav li{float:none; list-style: none !important; font-family: 'montserratregular'; text-transform: uppercase;}
 .navbar-nav li a{color: #ffffff; font-weight: normal; padding: 15px; display: block; background-color: rgba(227, 68, 61, .8);}
-.navbar-nav li a:hover{  font-weight: bolder; background: #d3493e; }
+.navbar-nav li a:hover{font-weight: bolder; background: #d3493e; text-decoration: none; }
+.navbar-fixed-top{z-index: 1031;}
 
 
 /******************************* Contenido Inicio **************************************/
 
-main{ background-color:#fff; position:relative; z-index: 999;}
+main{ background-color:#fff; position:relative; z-index: 1030;}
 
 /* Texto invitacion */
 .invite{margin-bottom: 140px;}
@@ -280,6 +282,28 @@ ul.prof-soc{list-style: none; display: table; margin: 0 auto;}
 ul.prof-soc li{float: left; text-align: center; padding: 25px; font-size: 25px;}
 ul.prof-soc li a{color:#000; -webkit-transition: all 0.3s ease; -moz-transition: all 0.3s ease; -ms-transition: all 0.3s ease; transition: all 0.3s ease;border-radius: 85px; padding: 5px;}
 ul.prof-soc li a:hover{background:#000; color:#ffffff; }
+
+/******** The Brand of Content & Clientes Efectos Figure ********/
+.fig-content h3 a,  .fig-content p {color: #fff !important; }
+
+figure.effect-oscar {background: rgba(0, 0, 0, .7); }
+figure.effect-oscar img {opacity: 0.9; -webkit-transition: opacity 0.35s; transition: opacity 0.35s; }
+figure.effect-oscar figcaption {padding: 5px; transition: background-color 0.35s; position: absolute; bottom: 0; left: 0; width: 100%; height: 100%; }
+figure.effect-oscar figcaption::before {position: absolute; top: 30px; right: 30px; bottom: 30px; left: 30px; border: 1px solid #fff; content: ''; }
+figure.effect-oscar h3 {margin: 0 0 5px 0; -webkit-transition: -webkit-transform 0.35s; transition: transform 0.35s; -webkit-transform: translate3d(0,100%,0); transform: translate3d(0,100%,0); font-family: 'montserratbold'; font-size: 18px; color:#000 !important; text-align: left; }
+figure.effect-oscar p{font-family: 'robotoregular'; font-size: 14px; text-align: left; margin-bottom: 0;   color: #fff !important;}
+figure.effect-oscar figcaption::before,
+figure.effect-oscar figcaption .fig-content,
+figure.effect-oscar h3,
+figure.effect-oscar p {opacity: 0; -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; transition: opacity 0.35s, transform 0.35s; -webkit-transform: scale(0); transform: scale(0); }
+figure.effect-oscar:hover h3 {-webkit-transform: translate3d(0,0,0); transform: translate3d(0,0,0); }
+figure.effect-oscar:hover figcaption::before,
+figure.effect-oscar:hover figcaption .fig-content,
+figure.effect-oscar:hover h3,
+figure.effect-oscar:hover p {opacity: 1; -webkit-transform: scale(1); transform: scale(1); }
+figure.effect-oscar:hover figcaption {background-color: rgba(58,52,42,0); }
+figure.effect-oscar:hover figcaption .fig-content{  width: 70%; margin: 14% auto 0; display: block; padding: 10px; }
+figure.effect-oscar:hover img {opacity: 0.4; }
 
 /******************************* The Brand of Content **************************************/
 .main-container {padding: 40px 15px; }

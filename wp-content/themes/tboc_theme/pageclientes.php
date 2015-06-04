@@ -10,8 +10,8 @@ Template Name: Clientes | Casos
         <div class="row">
 
             <div class="col-md-10 col-md-offset-1 single-container ">
-                <h2><?php echo $post->post_title?></h2>
-                <p><?php echo $post->post_content?></p>
+                <h2><?php $cliente6 = get_post(6); echo $cliente6->post_title; ?></h2>
+                <p><?php echo $cliente6->post_content; ?></p>
             </div>
                  
     
@@ -19,82 +19,56 @@ Template Name: Clientes | Casos
     </div>
 </div>
 
-<div class="container main-container">
+<div class="container-fluid main-container">
 
   <div class="row masonry-container">
 
-    <div class="col-md-4 col-sm-6 item">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/200/200/abstract" alt="">
-        <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-    <!--/.item  -->
 
-    <div class="col-md-4 col-sm-6 item">
-      <div class="thumbnail">
-        <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore
-            enim quas.</p>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-    <!--/.item  -->
 
-    <div class="col-md-4 col-sm-6 item">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/200/200/abstract" alt="">
-        <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore
-            enim quas.</p>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-    <!--/.item  -->
+    <!-- Columnas Casos | Clientes  -->
+   
+      <?php $countmazclientes = 0 ?>
+      <?php foreach ($posts as $mazcliente): ?>
+        <?php $countmazclientes++ ?>
 
-    <div class="col-md-4 col-sm-6 item">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/200/200/abstract" alt="">
-        <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-    <!--/.item  -->
+        <?php if ($countmazclientes == 1 || $countmazclientes == 2 || $countmazclientes == 4){
+          $msize = 'big6';
+          $mclass = 'col-md-6 col-sm-6 col-esp item';
+        }
 
-    <div class="col-md-4 col-sm-6 item">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/200/200/abstract" alt="">
-        <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore
-            enim quas.</p>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
-    <!--/.item  -->
+        elseif ($countmazclientes == 5 || $countmazclientes == 6){
+          $msize = 'small300';
+          $mclass = 'col-md-3 col-sm-6 col-esp item';
+        }
 
-    <div class="col-md-4 col-sm-6 item">
-      <div class="thumbnail">
-        <img src="http://lorempixel.com/200/200/abstract" alt="">
-        <div class="caption">
-          <h3>Thumbnail label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, illum voluptates consectetur consequatur ducimus. Necessitatibus, nobis consequatur hic eaque laborum laudantium. Adipisci, explicabo, asperiores molestias deleniti unde dolore
-            enim quas.</p>
-          <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-        </div>
-      </div>
-    </div>
+        elseif ($countmazclientes == 3 ){
+          $msize = 'big300';
+          $mclass = 'col-md-3 col-sm-6 col-esp item';
+        }
+
+        elseif ($countmazclientes == 7 || $countmazclientes == 8 ){
+          $msize = 'big6';
+          $mclass = 'col-md-6 col-sm-6 col-esp item';
+        }
+
+        else {
+          $msize = 'big6';
+          $mclass = 'col-md-6 col-sm-6 col-esp item';
+        } 
+
+        ?>
+
+        <figure class="<?php echo $mclass ?>">
+          <a href="<?php echo get_permalink($mazcliente->ID)?>"><?php echo get_the_post_thumbnail( $mazcliente->ID , $msize, array('class' => 'img-responsive desktop')) ?></a>
+              
+          <figcaption style="visibility:hidden;display:none;">
+            <span>0<?php echo $countmazclientes ?></span>
+              <h3><a href="<?php echo get_permalink($cliente->ID) ?>" title="<?php echo $cliente->post_title ?>" rel="blog"><?php echo $cliente->post_title ?></a></h3>
+              <p><?php echo $cliente->post_excerpt;?>...</p>
+            </figcaption>
+          </figure>
+                          
+          <?php endforeach ?>
 
   </div>
   <!--/.masonry-container  -->
@@ -102,7 +76,7 @@ Template Name: Clientes | Casos
 </div>
 <!-- /.container -->
 
-<section class="upper">
+<section>
     <div class="container">
         <div class="row bigcta">
 

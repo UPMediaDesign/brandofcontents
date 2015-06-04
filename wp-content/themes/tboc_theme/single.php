@@ -5,13 +5,10 @@
             <div class="row">
 
                 <div class="col-md-10 col-md-offset-1 single-container ">
-                    
-                        <h2>CLIENTES / CASOS</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis mi. Donec consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lobortis mi. Donec consectetur, eros id ullamcorper elementum.</p>
-                    
+                    <h2><?php $cliente6 = get_post(6); echo $cliente6->post_title; ?></h2>
+                    <p><?php echo $cliente6->post_content; ?></p>
                 </div>
-                 
-    
+                
             </div>
         </div>
     </div>

@@ -1,12 +1,13 @@
 <?php if ( function_exists('add_theme_support') ) {
 add_theme_support('post-thumbnails');
-add_image_size('encabezado', 870, 200, true );
 add_image_size('col-md-6', 530, 353, true);
 add_image_size('col-md-7', 345, 345,true);
 add_image_size('col-md-12', 703, 358, true);
 add_image_size('personal', 405, 405, true);
-add_image_size('portadillas', 350, 550, true);
 add_image_size('encabezadopost',1210, 695, true );
+add_image_size('big300', 640, 720,true );
+add_image_size('small300', 640, 360,true );
+add_image_size('big6', 1280, 720,true );
 }
 
 add_post_type_support('page', 'excerpt');
@@ -22,7 +23,7 @@ add_action( 'init', 'register_my_menu' );
 <?php 
 function call_scripts() {
 	wp_deregister_script('jquery');
-	wp_register_script('jquery', 'https://code.jquery.com/jquery-1.10.0.min.js');
+	  wp_register_script('jquery', 'https://code.jquery.com/jquery-1.10.0.min.js');
     wp_register_script('core', get_template_directory_uri() . '/js/core.js');
 
     wp_enqueue_script('jquery');
@@ -40,10 +41,10 @@ function clientes_register() {
         'label' => 'Clientes | Casos',
         'singular_label' => 'Cliente',
         'public' => true,
-		'menu_position' => 5, 
+		    'menu_position' => 5, 
         '_builtin' => false,
         'capability_type' => 'post',
-		'has_archive' => false,
+		    'has_archive' => true,
         'hierarchical' => false,
         'rewrite' => array( 'slug' => 'clientes'),
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail' )
@@ -57,15 +58,32 @@ function personales_register() {
         'label' => 'Personal',
         'singular_label' => 'Personal',
         'public' => true,
-		'menu_position' => 5, 
+		    'menu_position' => 5, 
         '_builtin' => false,
         'capability_type' => 'post',
-		'has_archive' => false,
+		    'has_archive' => false,
         'hierarchical' => false,
         'rewrite' => array( 'slug' => 'personales'),
         'supports' => array('title', 'editor', 'thumbnail' )
     );
     register_post_type('personales', $args);
+    flush_rewrite_rules();
+}
+add_action('init', 'formulas_register');
+function formulas_register() {
+    $args = array(
+        'label' => 'Formula',
+        'singular_label' => 'Formula',
+        'public' => true,
+        'menu_position' => 5, 
+        '_builtin' => false,
+        'capability_type' => 'post',
+        'has_archive' => false,
+        'hierarchical' => false,
+        'rewrite' => array( 'slug' => 'formulas'),
+        'supports' => array('title', 'editor', 'thumbnail' )
+    );
+    register_post_type('formulas', $args);
     flush_rewrite_rules();
 }
 register_taxonomy('casos', array('clientes'), array("hierarchical" => true, "label" => "Casos", "singular_label" => "Caso", "rewrite" => 'hierarchical'));

@@ -57,7 +57,7 @@
                       ?>
 
                     <figure class="<?php echo $class ?>">
-                            <a href="<?php echo get_permalink($cliente->ID)?>"><?php echo get_the_post_thumbnail( $cliente->ID , $col, array('class' => 'img-responsive desktop')) ?></a>
+                            <a href="<?php echo get_permalink($cliente->ID)?>"><?php echo get_the_post_thumbnail( $cliente->ID , $col, array('class' => 'img-responsive')) ?></a>
               
                             <figcaption>
                               <span>0<?php echo $countclientes ?></span>
