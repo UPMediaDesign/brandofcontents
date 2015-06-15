@@ -29,7 +29,7 @@ Template Name: Clientes | Casos
    
       <?php $countmazclientes = 0 ?>
       <?php foreach ($posts as $mazcliente): ?>
-        <?php $countmazclientes++ ?>
+      <?php $countmazclientes++ ?>
 
         <?php if ($countmazclientes == 1 || $countmazclientes == 2 || $countmazclientes == 4){
           $msize = 'big6';
@@ -67,6 +67,7 @@ Template Name: Clientes | Casos
                     <a href="<?php echo get_permalink($mazcliente->ID) ?>" title="<?php echo $mazcliente->post_title ?>" rel="blog"><?php echo $mazcliente->post_title ?></a>
                   </h3>
                   <p><?php echo substr($mazcliente->post_content , 0 , 62 )?>...</p>
+                  <a class="btx" href="<?php echo get_permalink($cliente->ID) ?>" title="<?php echo $cliente->post_title ?>" rel="blog">Ver más</a>
               </div>
             </figcaption>
           </figure>
@@ -84,7 +85,7 @@ Template Name: Clientes | Casos
         <div class="row bigcta">
 
             <div class="col-md-12">
-                <a href="<?php echo get_page_link(6)?>">Nuestra Experiencia</a>
+                <a href="<?php echo get_page_link(4)?>">Nuestra Experiencia</a>
             </div>  
 
         </div>

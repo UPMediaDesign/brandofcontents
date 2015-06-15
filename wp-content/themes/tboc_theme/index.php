@@ -1,12 +1,11 @@
 <?php get_header()?>
 
-<video id="v0" tabindex="0" autobuffer="autobuffer" preload="preload">
+<video class="hidden-sm hidden-xs" id="v0" tabindex="0" autobuffer="autobuffer" preload="preload">
       <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.webm"></source>
       <source type="video/ogg; codecs=&quot;theora, vorbis&quot;" src="http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.ogv"></source>
       <source type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" src="http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4"></source>
       <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
 </video>
-
 
 <main style="margin-top:4000px">
 	<section>
@@ -40,24 +39,24 @@
 
                     <?php if ($countclientes == 1){
                       $col = 'col-md-6';
-                    $class = 'col-md-6 col-sm-4 number first item';
+                    $class = 'col-md-6 col-sm-12 number first item';
                     }
 
                     elseif ($countclientes == 2){
                       $col = 'col-md-7';
-                    $class = 'col-md-6 col-sm-4 number second item';
+                    $class = 'col-md-6 col-sm-12 number second item';
                       }
 
                       else{
                       $col = 'col-md-12';
-                    $class = 'col-md-12 col-sm-4 number third item';
+                    $class = 'col-md-12 col-sm-12 number third item';
                     } 
 
                       
                       ?>
 
                     <figure class="<?php echo $class ?>">
-                            <a href="<?php echo get_permalink($cliente->ID)?>"><?php echo get_the_post_thumbnail( $cliente->ID , $col, array('class' => 'img-responsive')) ?></a>
+                            <a href="<?php echo get_permalink($cliente->ID)?>"><?php echo get_the_post_thumbnail( $cliente->ID , $col, array('class' => 'img-responsive desktop')) ?></a>
               
                             <figcaption>
                               <span>0<?php echo $countclientes ?></span>

@@ -42,6 +42,7 @@ Template Name: Somos
 						</ul>
 					</figcaption>
 				</figure>
+				<div class="separator hidden-sm hidden-lg hidden-xs hidden-md"></div>
 
 				<?php endforeach ?>
 
@@ -49,11 +50,13 @@ Template Name: Somos
 	</div>
 </section>
 
+<div class="separator hidden-sm hidden-lg hidden-xs hidden-md"></div>
+
 <section class="upper">
     <div class="container">
         <div class="row bigcta">
             <div class="col-md-12">
-                <a href="<?php echo get_page_link(10)?>">Trabaja con Nosotros</a>
+                <a href="<?php echo get_page_link(67)?>">Trabaja con Nosotros</a>
                          
                 <?php echo apply_filters('the_content' , $post->wp_count_posts)?>
             </div>  

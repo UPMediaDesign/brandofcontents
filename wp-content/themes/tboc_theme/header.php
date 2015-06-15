@@ -3,6 +3,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <?php if(is_home()){?>
 	<title><?php wp_title();?></title>
 <?php }else{?>
@@ -55,6 +56,11 @@
 
 
 <nav class="nav mostrar" role="navigation" id="menu">
+  <ul id="menu-menu-superior" class="logo-position navbar-nav">
+    <li>
+      <img src="<?php bloginfo('template_directory'); ?>/images/logotbocsmall.png" />
+    </li>
+  </ul>
 	<?php wp_nav_menu( array( 'container' => 'none', 'menu_class' => 'navbar-nav' , 'theme_location' => 'primary' ) ); ?>
 </nav>
 

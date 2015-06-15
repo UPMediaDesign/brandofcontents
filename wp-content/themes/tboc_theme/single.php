@@ -27,7 +27,7 @@
                   <a href="<?php echo get_page_link(6)?>">< Volver</a>
                 </div>  
                 <div class="col-md-6 throwtext">
-                    <p>Caso <?php echo get_field('numero_caso')?></p>
+                    <p>Caso  </p>
                 </div>
                 <div class="col-md-12 titlesingle">
                     <h2><?php echo $post->post_title?></h2>

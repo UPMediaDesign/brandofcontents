@@ -65,6 +65,7 @@ Template Name: Clientes | Casos
             <span>0<?php echo $countmazclientes ?></span>
               <h3><a href="<?php echo get_permalink($cliente->ID) ?>" title="<?php echo $cliente->post_title ?>" rel="blog"><?php echo $cliente->post_title ?></a></h3>
               <p><?php echo $cliente->post_excerpt;?>...</p>
+              <a href="<?php echo get_permalink($cliente->ID) ?>" title="<?php echo $cliente->post_title ?>" rel="blog">Ver más</a>
             </figcaption>
           </figure>
                           

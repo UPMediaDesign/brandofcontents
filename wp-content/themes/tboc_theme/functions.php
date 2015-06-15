@@ -69,23 +69,6 @@ function personales_register() {
     register_post_type('personales', $args);
     flush_rewrite_rules();
 }
-add_action('init', 'formulas_register');
-function formulas_register() {
-    $args = array(
-        'label' => 'Formula',
-        'singular_label' => 'Formula',
-        'public' => true,
-        'menu_position' => 5, 
-        '_builtin' => false,
-        'capability_type' => 'post',
-        'has_archive' => false,
-        'hierarchical' => false,
-        'rewrite' => array( 'slug' => 'formulas'),
-        'supports' => array('title', 'editor', 'thumbnail' )
-    );
-    register_post_type('formulas', $args);
-    flush_rewrite_rules();
-}
 register_taxonomy('casos', array('clientes'), array("hierarchical" => true, "label" => "Casos", "singular_label" => "Caso", "rewrite" => 'hierarchical'));
 
 ?>

@@ -8,7 +8,7 @@
               Consectetur adipiscing elit. Etiam sodales</p>
         </div>
         <div class="contact-foot">
-          <a href="<?php echo get_page_link(8)?>" title="Contáctanos" rel="help">Contáctanos</a>
+          <a href="<?php echo get_page_link(10)?>" title="Contáctanos" rel="help">Contáctanos</a>
 
         </div>
          <ul class="web-soc">
@@ -62,6 +62,8 @@
       });
 </script>
 <?php }?>
+
+
 
 <script>
 /*(function( $ ) {
